@@ -53,11 +53,11 @@ func (r *SlackReporter) Report(e *Event) error {
 	log.Infof("Reporting event via Slack: %s", e.Message)
 
 	data, err := json.Marshal(struct {
-		Text      string
-		Channel   string
-		LinkNames string
-		Username  string
-		IconEmoji string
+		Text      string `json:"text"`
+		Channel   string `json:"channel"`
+		LinkNames string `json:"link_names"`
+		Username  string `json:"username"`
+		IconEmoji string `json:"icon_emoji"`
 	}{
 		Text:      e.Message,
 		Channel:   r.Channel,
