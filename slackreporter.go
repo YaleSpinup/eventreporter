@@ -82,6 +82,8 @@ func (r *SlackReporter) Report(e *Event) error {
 	}
 	defer res.Body.Close()
 
+	log.Debugln("Got response from POST:", res.StatusCode)
+
 	if res.StatusCode > 299 {
 		return fmt.Errorf("Got a non-success http response from http POST to %s, %d", r.Endpoint, res.StatusCode)
 	}
