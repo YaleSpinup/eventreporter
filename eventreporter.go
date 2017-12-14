@@ -1,5 +1,7 @@
 package eventreporter
 
+import "net/http"
+
 type Level uint32
 
 const (
@@ -16,4 +18,8 @@ type Event struct {
 
 type Reporter interface {
 	Report(*Event) error
+}
+
+type HTTPClient interface {
+	Do(req *http.Request) (*http.Response, error)
 }

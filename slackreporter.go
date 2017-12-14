@@ -17,7 +17,7 @@ type SlackReporter struct {
 	Channel  string
 	Username string
 	Icon     string
-	Client   *http.Client
+	Client   HTTPClient
 }
 
 func NewSlackReporter(options map[string]string) (*SlackReporter, error) {
