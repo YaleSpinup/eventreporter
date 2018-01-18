@@ -15,7 +15,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	report "git.yale.edu/spinup/eventreporter"
+	report "github.com/YaleSpinup/eventreporter"
 )
 
 var eventReportersList = map[string]map[string]string{
