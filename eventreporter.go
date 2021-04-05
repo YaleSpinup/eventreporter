@@ -37,7 +37,7 @@ func New(name string, config map[string]string) (Reporter, error) {
 
 		return reporter, nil
 	case "email":
-		reporter, err := NewSlackReporter(config)
+		reporter, err := NewEmailReporter(config)
 		if err != nil {
 			return nil, err
 		}
