@@ -3,7 +3,7 @@ module github.com/YaleSpinup/eventreporter
 go 1.18
 
 require (
-	github.com/fortytw2/leaktest v1.2.0
+	github.com/fortytw2/leaktest v1.3.0
 	github.com/sirupsen/logrus v1.9.0
 )
 
